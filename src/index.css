@@ -66,3 +66,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 100;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+* {
+  font-family: 'Netflix Sans';
+  margin: 0;
+  padding: 0;
+}

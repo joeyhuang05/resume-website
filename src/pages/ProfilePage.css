@@ -1,15 +1,10 @@
-@font-face {
-    font-family: 'Netflix Sans';
-    font-weight: 100;
-    font-display: optional;
-    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,352;1,352&display=swap');
 
+/* profile-page.html */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -24,17 +19,16 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: #141414;
     color: #fff;
-    font-family: 'Netflix Sans', 'Montserrat', sans-serif;
     user-select: none;
     cursor: default;
     line-height: 1.2;
 }
 
 .centered-container {
-    display: flex;
     position: fixed;
     align-items: center;
     inset: 0;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
@@ -86,12 +80,11 @@ body {
     }
 }
 
-.profile:hover {
-    .profile-icon {
+.profile:hover{
+    .profile-icon{
         border: 2px solid white;
     }
-
-    .profile-name {
+    .profile-name{
         color: white;
     }
 }
@@ -143,7 +136,7 @@ body {
     text-decoration: none;
 }
 
-.exit-button:hover {
+.exit-button:hover{
     border: 1px solid white;
     color: white;
 }
