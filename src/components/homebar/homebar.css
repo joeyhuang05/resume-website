@@ -32,58 +32,24 @@ body {
 
 .centered-container {
     display: flex;
-    position: fixed;
     align-items: center;
-    inset: 0;
-    flex-direction: column;
     justify-content: center;
-    position: absolute;
-    z-index: 100;
-    text-align: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
-.homebar {
+.header {
+    display: flex;
+    justify-content: center;
     font-size: clamp(30px, 3.5vw, 3.5vw);
     width: 100%;
-    font-weight: bold;
 }
 
 .profile-select {
-    padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 2vw;
-    list-style-type: none;
-}
-
-@media (max-width: 768px) {
-    .profile-select {
-        align-items: center;
-    }
-
-    .profile {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-select {
-        align-items: center;
-    }
-
-    .profile {
-        margin-bottom: 15px;
-    }
-
-    .profile-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .profile-name {
-        font-size: 0.9rem;
-    }
+    list-style: none;
 }
 
 .profile:hover {
@@ -128,6 +94,11 @@ body {
     min-height: 1.8em;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.exit {
+    display: flex;
+    justify-content: center;
 }
 
 .exit-button {

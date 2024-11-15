@@ -1,4 +1,5 @@
 import './homebar.css'
+import React from "react"
 import JoeyIcon from '../../assets/joeymouthopen.jpg'
 import FriendsIcon from '../../assets/friends-and-family.jpg'
 import RecruiterIcon from '../../assets/recruiter.jpg'
@@ -39,57 +40,42 @@ function randomSE() {
     return randomUrl;
 }
 
-function Homebar() {
+function Profile({ name, image }) {
     return (
-        <body>
-            <div className='centered container'>
-                <div className='list-profiles'>
-                    <h1 className='homebar fade-in'>Who's watching?</h1>
-
-                    <ul className='profile-select fade-in'>
-                        <li className="profile">
-                            <div>
-                                <a className="profile-link" tabindex="0">
-                                    <div className="avatar-wrapper">
-                                        <div className="profile-icon">
-                                            <img src={JoeyIcon}></img>
-                                        </div>
-                                    </div>
-                                    <span className="profile-name">JOEY</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li className="profile">
-                            <div>
-                                <a className="profile-link" tabindex="0">
-                                    <div className="avatar-wrapper">
-                                        <div className="profile-icon">
-                                            <img src={FriendsIcon}></img>
-                                        </div>
-                                    </div>
-                                    <span className="profile-name">FRIENDS</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li claclassNamess="profile">
-                            <div>
-                                <a className="profile-link" tabindex="0">
-                                    <div className="avatar-wrapper">
-                                        <div className="profile-icon">
-                                            <img src={RecruiterIcon}></img>
-                                        </div>
-                                    </div>
-                                    <span className="profile-name">RECRUITER</span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+        <a className="profile-link" tabindex="0">
+            <div className="avatar-wrapper">
+                <div className="profile-icon" style={{ backgroundImage: `url(${image})` }}>
                 </div>
-                <span className='exit fade-in'>
-                    <a aria-label='Exit' className='exit-button' href='#' onClick={randomSE}>i don't belong here...</a>
-                </span>
             </div>
-        </body>
+            <span class="profile-name">{name}</span>
+        </a>
+    )
+}
+
+function Homebar() {
+    const profiles = [
+        { name: "JOEY", image: JoeyIcon },
+        { name: "FRIENDS", image: FriendsIcon },
+        { name: "RECRUITER", image: RecruiterIcon }
+    ]
+
+    return (
+        <div className='centered container'>
+            <div className='list-profiles'>
+                <h1 className='header fade-in'>Who's watching?</h1>
+
+                <ul className='profile-select fade-in'>
+                    {profiles.map((profile, index) => (
+                        <li className="profile" key={index}>
+                            <Profile name={profile.name} image={profile.image} />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <span className='exit fade-in'>
+                <a aria-label='Exit' className='exit-button' href='#' onClick={randomSE}>i don't belong here...</a>
+            </span>
+        </div>
     )
 }
 
