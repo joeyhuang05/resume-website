@@ -15,18 +15,17 @@ function NavPage() {
                 <title>Home</title>
             </Helmet>
 
-            <div style={{
-                backgroundImage: `url(${navBackground})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                height: '100vh',
-                width: '100vw',
-                }}>
-            </div>
-
-            {/** not aligned correctly*/}
-            
+            <div 
+                style={{
+                    backgroundImage: `url(${navBackground})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '100vh',
+                    position: 'fixed',
+                    inset: '0'
+                }}
+            >
+            </div>            
         </>
     )
 }
