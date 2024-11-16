@@ -1,0 +1,51 @@
+/* @font-face {
+    font-family: 'Netflix Sans';
+    src: url(../fonts/NetflixSans-Light.otf)
+} */
+ 
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in forwards;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #141414;
+    color: #fff;
+    font-family: 'Netflix Sans', sans-serif;
+    user-select: none;
+    cursor: default;
+    line-height: 1.2;
+}
+
+.profile:hover {
+    .profile-icon {
+        border: 2px solid white;
+    }
+
+    .profile-name {
+        color: white;
+    }
+}
+
+.exit-button:hover {
+    border: 1px solid white;
+    color: white;
+}

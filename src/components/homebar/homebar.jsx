@@ -4,6 +4,7 @@ import JoeyIcon from '../../assets/joeymouthopen.jpg'
 import FriendsIcon from '../../assets/friends-and-family.jpg'
 import RecruiterIcon from '../../assets/recruiter.jpg'
 
+// font formatting is wack when you click into site and go back
 function randomSE() {
     const urls = [
         "https://www.accoona.com",
@@ -37,7 +38,7 @@ function randomSE() {
     ];
 
     const randomUrl = urls[Math.floor(Math.random() * urls.length)];
-    return randomUrl;
+    window.location = randomUrl;
 }
 
 function Profile({ name, image }) {
@@ -60,7 +61,7 @@ function Homebar() {
     ]
 
     return (
-        <div className='centered container'>
+        <div className='centered-container'>
             <div className='list-profiles'>
                 <h1 className='header fade-in'>Who's watching?</h1>
 
@@ -73,7 +74,7 @@ function Homebar() {
                 </ul>
             </div>
             <span className='exit fade-in'>
-                <a aria-label='Exit' className='exit-button' href='#' onClick={randomSE}>i don't belong here...</a>
+                <a aria-label='Exit' className='exit-button' onClick={randomSE}>i don't belong here...</a>
             </span>
         </div>
     )

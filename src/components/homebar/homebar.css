@@ -1,65 +1,28 @@
-@font-face {
-    font-family: 'Netflix Sans';
-    font-weight: 100;
-    font-display: optional;
-    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.4s ease-in forwards;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    background-color: #141414;
-    color: #fff;
-    font-family: 'Netflix Sans', 'Montserrat', sans-serif;
-    user-select: none;
-    cursor: default;
-    line-height: 1.2;
-}
-
 .centered-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     flex-direction: column;
+    height: 100vh;
+
+    inset: 0;
+    z-index: 100;
+    position: absolute;
+    text-align: center;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
     font-size: clamp(30px, 3.5vw, 3.5vw);
+    font-weight: bold;
     width: 100%;
 }
 
 .profile-select {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2vw;
     list-style: none;
-}
-
-.profile:hover {
-    .profile-icon {
-        border: 2px solid white;
-    }
-
-    .profile-name {
-        color: white;
-    }
 }
 
 .profile-link {
@@ -96,10 +59,6 @@ body {
     text-overflow: ellipsis;
 }
 
-.exit {
-    display: flex;
-    justify-content: center;
-}
 
 .exit-button {
     background-color: #141414;
@@ -112,9 +71,4 @@ body {
     padding: 0.5em 1.5em;
     cursor: pointer;
     text-decoration: none;
-}
-
-.exit-button:hover {
-    border: 1px solid white;
-    color: white;
 }
