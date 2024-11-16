@@ -1,8 +1,13 @@
 import './homebar.css'
 import React from "react"
+import { useNavigate } from 'react-router-dom'
+
 import JoeyIcon from '../../assets/joeymouthopen.jpg'
 import FriendsIcon from '../../assets/friends-and-family.jpg'
 import RecruiterIcon from '../../assets/recruiter.jpg'
+import JoeyNav from '../../assets/london-1440x709.jpg'
+import FriendsNav from '../../assets/poconos-1440x709.jpg'
+import RecruiterNav from '../../assets/grad-1440x709.jpg'
 
 // font formatting is wack when you click into site and go back
 function randomSE() {
@@ -37,15 +42,15 @@ function randomSE() {
         "https://bharatsearch.weebly.com"
     ];
 
-    const randomUrl = urls[Math.floor(Math.random() * urls.length)];
-    window.location = randomUrl;
+    const randomUrl = urls[Math.floor(Math.random() * urls.length)]
+    window.location = randomUrl
 }
 
-function Profile({ name, image }) {
+function Profile({ name, icon }) {
     return (
         <a className="profile-link" tabindex="0">
             <div className="avatar-wrapper">
-                <div className="profile-icon" style={{ backgroundImage: `url(${image})` }}>
+                <div className="profile-icon" style={{ backgroundImage: `url(${icon})` }}>
                 </div>
             </div>
             <span class="profile-name">{name}</span>
@@ -55,10 +60,15 @@ function Profile({ name, image }) {
 
 function Homebar() {
     const profiles = [
-        { name: "JOEY", image: JoeyIcon },
-        { name: "FRIENDS", image: FriendsIcon },
-        { name: "RECRUITER", image: RecruiterIcon }
+        { name: "JOEY", icon: JoeyIcon, navBackground: JoeyNav },
+        { name: "FRIENDS", icon: FriendsIcon, navBackground: FriendsNav },
+        { name: "RECRUITER", icon: RecruiterIcon, navBackground: RecruiterNav }
     ]
+
+    const navigate = useNavigate()
+    const handleRedirect = (profile) => {
+        navigate('/nav', { state: profile })
+    }
 
     return (
         <div className='centered-container'>
@@ -67,8 +77,8 @@ function Homebar() {
 
                 <ul className='profile-select fade-in'>
                     {profiles.map((profile, index) => (
-                        <li className="profile" key={index}>
-                            <Profile name={profile.name} image={profile.image} />
+                        <li className="profile" key={index} onClick={() => handleRedirect(profile)}>
+                            <Profile name={profile.name} icon={profile.icon} />
                         </li>
                     ))}
                 </ul>
