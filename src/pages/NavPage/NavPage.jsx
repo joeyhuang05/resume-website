@@ -2,19 +2,19 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useLocation } from 'react-router-dom'
 import './NavPage.css'
+import Header from '../../components/header/header'
 
 function NavPage() {
     const location = useLocation()
     const { name, icon, navBackground } = location.state || {}
     
-    console.log(location.state)
+    // console.log(location.state)
 
     return (
         <>
             <Helmet>
                 <title>Home</title>
             </Helmet>
-
             <div 
                 style={{
                     backgroundImage: `url(${navBackground})`,
@@ -22,11 +22,13 @@ function NavPage() {
                     backgroundPosition: 'center',
                     height: '100vh',
                     position: 'fixed',
-                    inset: '0'
+                    inset: '0',
                 }}
             >
-            </div>            
+            </div>
+            <Header />
         </>
+        
     )
 }
 

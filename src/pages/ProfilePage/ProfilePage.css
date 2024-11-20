@@ -20,11 +20,6 @@
     }
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.4s ease-in forwards;
-}
-
 body {
     -webkit-font-smoothing: antialiased;
     background-color: #141414;
@@ -33,6 +28,11 @@ body {
     user-select: none;
     cursor: default;
     line-height: 1.2;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in forwards;
 }
 
 .profile:hover {

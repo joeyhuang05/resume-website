@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Netflix Sans';
+    font-weight: 100;
+    font-display: swap;
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format('woff2'), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format('woff')
+}
+
+body {
+    font-family: 'Netflix Sans';
+    font-size: clamp(7px, 0.9vw, 0.9vw);
+    line-height: 1.2;
+    user-select: none;
+}

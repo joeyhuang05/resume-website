@@ -9,7 +9,6 @@ import JoeyNav from '../../assets/london-1440x709.jpg'
 import FriendsNav from '../../assets/poconos-1440x709.jpg'
 import RecruiterNav from '../../assets/grad-1440x709.jpg'
 
-// font formatting is wack when you click into site and go back
 function randomSE() {
     const urls = [
         "https://www.accoona.com",
