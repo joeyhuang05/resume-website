@@ -22,7 +22,6 @@ function NavPage() {
                     backgroundPosition: 'center',
                     height: '100vh',
                     position: 'fixed',
-                    inset: '0',
                 }}
             >
             </div>
