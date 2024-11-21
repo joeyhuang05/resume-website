@@ -58,16 +58,16 @@ function Profile({ name, icon }) {
 }
 
 function Homebar() {
+    const navigate = useNavigate()
+    const handleRedirect = (profile) => {
+        navigate('/nav', { state: profile })
+    }
+    
     const profiles = [
         { name: "JOEY", icon: JoeyIcon, navBackground: JoeyNav },
         { name: "FRIENDS", icon: FriendsIcon, navBackground: FriendsNav },
         { name: "RECRUITER", icon: RecruiterIcon, navBackground: RecruiterNav }
     ]
-
-    const navigate = useNavigate()
-    const handleRedirect = (profile) => {
-        navigate('/nav', { state: profile })
-    }
 
     return (
         <div className='centered-container'>

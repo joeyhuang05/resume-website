@@ -6,10 +6,12 @@ import Homebar from '../../components/homebar/homebar'
 function ProfilePage(){
     return (
         <>
-            <Helmet>
-                <title>Joey Huang</title>
-            </Helmet>
-            <Homebar/>
+            <div className='profile-page'>
+                <Helmet>
+                    <title>Joey Huang</title>
+                </Helmet>
+                <Homebar/>
+            </div>
         </>
     )
 }

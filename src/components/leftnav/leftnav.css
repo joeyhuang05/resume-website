@@ -1,0 +1,15 @@
+.left-nav {
+    display: flex;
+}
+
+.pushable {
+    font-family: 'Netflix Sans';
+    margin-left: 1.75vw;
+    white-space: nowrap;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+.pushable:hover {
+    color: #a5a19c;
+}

@@ -20,7 +20,7 @@
     }
 }
 
-body {
+.profile-page body {
     -webkit-font-smoothing: antialiased;
     background-color: #141414;
     color: #fff;
