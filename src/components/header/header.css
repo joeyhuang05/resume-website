@@ -23,3 +23,27 @@
     align-items: center;
 }
 
+.right-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    flex-grow: 1;
+    right: 4%;
+}
+
+.profile-icon img {
+    width: 3.75vw;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, 0.5)
+}
+
+.dropdown-menu {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}

@@ -15,17 +15,12 @@ function NavPage() {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            <div 
-                style={{
-                    backgroundImage: `url(${navBackground})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '100vh',
-                    position: 'fixed',
-                }}
+            <div
+                className='nav-background'
+                style={{ backgroundImage: `url(${navBackground})` }}
             >
             </div>
-            <Header />
+            <Header name={name} icon={icon} navBackground={navBackground}/>
         </>
         
     )

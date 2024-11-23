@@ -11,3 +11,10 @@ body {
     line-height: 1.2;
     user-select: none;
 }
+
+.nav-background {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: fixed;
+}

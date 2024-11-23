@@ -1,5 +1,5 @@
 import './homebar.css'
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 
 import JoeyIcon from '../../assets/joeymouthopen.jpg'
@@ -59,15 +59,25 @@ function Profile({ name, icon }) {
 
 function Homebar() {
     const navigate = useNavigate()
-    const handleRedirect = (profile) => {
-        navigate('/nav', { state: profile })
-    }
     
     const profiles = [
         { name: "JOEY", icon: JoeyIcon, navBackground: JoeyNav },
         { name: "FRIENDS", icon: FriendsIcon, navBackground: FriendsNav },
         { name: "RECRUITER", icon: RecruiterIcon, navBackground: RecruiterNav }
     ]
+
+    const [ selectedProfile, setSelectedProfile ] = useState(() => {
+        return JSON.parse(localStorage.getItem('selectedProfile')) || profiles[0]
+    })
+
+    useEffect(() => {
+        localStorage.setItem('selectedProfile', JSON.stringify(selectedProfile))
+    }, [selectedProfile])
+    
+    const handleRedirect = (profile) => {
+        setSelectedProfile(profile)
+        navigate('/nav', { state: profile })
+    }
 
     return (
         <div className='centered-container'>
