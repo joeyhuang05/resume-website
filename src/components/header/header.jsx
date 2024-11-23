@@ -90,4 +90,5 @@ export default Header
 //         <img src={profile.icon} />
 //         <span>{profile.name}</span>
 //     </button>
-// )
+// ))}
+// </div>
