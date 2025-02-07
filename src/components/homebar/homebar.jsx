@@ -47,12 +47,12 @@ function randomSE() {
 
 function Profile({ name, icon }) {
     return (
-        <a className="profile-link" tabindex="0">
+        <a className="profile-link" tabIndex="0">
             <div className="avatar-wrapper">
                 <div className="profile-icon" style={{ backgroundImage: `url(${icon})` }}>
                 </div>
             </div>
-            <span class="profile-name">{name}</span>
+            <span className="profile-name">{name}</span>
         </a>
     )
 }

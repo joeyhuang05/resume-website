@@ -1,5 +1,5 @@
 import './header.css'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import JoeyLogo from '../../assets/joeynetflixlogo.png'
 import LeftNav from '../leftnav/leftnav'
 import { useNavigate } from 'react-router-dom'
@@ -75,6 +75,8 @@ function Header({ name, icon, navBackground }) {
 }
 
 export default Header
+
+// notes: name icon onClick isn't working or cursor
 
 // <button className='dropdown-menu'>
 // <img id='profile-icon' src={selectedProfile.icon} />
